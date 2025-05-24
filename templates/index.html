@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Steganography Tool 🔥</h1>
+
+    <section>
+        <h2>Encode Message</h2>
+        <input type="file" id="input-image" accept="image/*"><br><br>
+        <textarea id="message" placeholder="Enter your secret message..."></textarea><br><br>
+        <a id="save-btn" href="#" download="encoded_image.png">
+            <button>Save Encoded Image</button>
+        </a>
+    </section>
+
+    <section>
+        <h2>Decode Message</h2>
+        <input type="file" id="decode-input" accept="image/*"><br><br>
+        <button id="decode-btn">Decode</button>
+        <p id="decoded-message">Decoded Message will appear here.</p>
+    </section>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
